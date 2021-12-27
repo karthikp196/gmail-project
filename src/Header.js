@@ -7,8 +7,12 @@ import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
 import AppsIcon from '@mui/icons-material/Apps';
 import NotificationsIcon from '@mui/icons-material/Notifications';
 import Avatar from '@mui/material/Avatar';
+import { selectUser } from './features/userSlice';
 
 function Header() {
+    const user = selectUser();
+
+
     return (
         <div className="header">
             <div className="header_left">
@@ -37,7 +41,7 @@ function Header() {
                 </IconButton>
 
                 <IconButton>
-                    <Avatar />
+                    <Avatar src={ user?.photoUrl} />
                 </IconButton>
             
             </div>

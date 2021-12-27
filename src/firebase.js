@@ -24,7 +24,7 @@ import { getAuth } from "firebase/auth" // New import
     const app = initializeApp(firebaseConfig);
     const analytics = getAnalytics(app);
     const db = getFirestore();
-    const auth = getAuth(app);
+    const auth = getAuth();
     const storage = getStorage();
 
     export  { db, auth, storage};
